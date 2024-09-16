@@ -47,10 +47,10 @@ make install
 ## Usage
 - make install: Installs dependencies specified in requirements.txt.
 - make format: Formats Python files using Black.
-- make lint: Lints Python files using Pylint, ignoring specific patterns.
-- make test: Runs tests using pytest and generates a coverage report.
+- make lint: Lints Python files using ruff,
+- make test: Runs tests using pytest and generates a coverage report.and  implementation of the nbval plugin for pytest in the Jupyter Notebook.
 - make clean: Removes pytest cache.
-- make generate_profile_report: Generates a profiling report in HTML and Markdown formats during CI/CD.
+- make generate_profile_report: Generates a profiling report in Markdown formats during CI/CD.
 
 ## CI/CD Setup
 - Location: .github/workflows/

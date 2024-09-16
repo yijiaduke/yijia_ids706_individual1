@@ -27,7 +27,7 @@ all: install lint test format deploy
 
 
 generate_report:
-	python -c "from main import load_dataset, calculate_statistics, generate_md_report, generate_visualizations; \
+	python -c "from script import load_dataset, calculate_statistics, generate_md_report, generate_visualizations; \
 	data = load_dataset('rdu-weather-history.csv'); \
 	stats = calculate_statistics(data); \
 	image_paths = generate_visualizations('rdu-weather-history.csv'); \
