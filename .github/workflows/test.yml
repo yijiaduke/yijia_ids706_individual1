@@ -1,4 +1,4 @@
-name: CI
+name: Test
 on:
   push:
     branches: [ "main" ]
@@ -9,15 +9,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
-      - name: install packages
+
+      - name: Setup
         run: make install
-      - name: lint
-        run: make lint
-      - name: test
+
+      - name: Test
         run: make test
-      - name: format
-        run: make format
-      - name: deploy
-        run: make deploy
+      
+      - name: Generate and Push Markdown Report
+        run: make generate_report

@@ -12,4 +12,12 @@ fastapi==0.85.0
 uvicorn==0.18.3
 
 
+# Data processing and visualization
+matplotlib>=3.0 
+pandas>=1.0
+tabulate
+pypandoc
+nbval==0.10.0
+
+
 
