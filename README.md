@@ -16,9 +16,12 @@ This project is designed to generate descriptive statistics and visualizations f
 - **`.github/workflows/`**: Contains CI/CD workflows for GitHub, which trigger actions like setup, linting, and testing when code is pushed to the repository.
 - **`rdu-weather-history.csv`**: Contains weather data for the Durham region, used as the dataset for analysis.
 - **`summary_report.md`**: A generated report with summary statistics (mean, median, standard deviation) and visualizations.
-- **`main.py   `**: Include the functionality method, such as generate_visualizations and generate_md_report 
-
+- **`script.py   `**: Include the functionality method, such as generate_visualizations and generate_md_report 
 - **`lib.py`**:  Contains Reusable Utility Functions, which can be used in both Juypter notebook and script code, load_dataset, calculate_statistics, create_histogram
+- **`test_script.py`**: 
+- **`test_lib.py`**: 
+- **`main.ipynb`**: Jupyter Notebook test
+
 
 
 ## Setup
