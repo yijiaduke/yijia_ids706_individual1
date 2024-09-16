@@ -55,7 +55,6 @@ def test_create_histogram():
 
 
 if __name__ == "__main__":
-    # Manually run tests
     test_load_data()
     test_calculate_statistics()
     test_create_histogram()

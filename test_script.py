@@ -4,7 +4,6 @@ import pandas as pd
 from mylib.lib import load_dataset
 from main import general_describe, summary, generate_visualizations, generate_md_report
 
-# Define the path to the test dataset
 file_path = "rdu-weather-history.csv"
 
 
@@ -24,15 +23,6 @@ def test_general_describe(data):
     for column in numeric_columns:
         assert column in desc.columns, \
             f"Expected column '{column}' not found in the description"
-
-def test_summary(data):
-    """Test the summary function."""
-    stats = summary(file_path)
-    expected_columns = ["Temperature Minimum", "Temperature Maximum", "Precipitation"]
-    for column in expected_columns:
-        assert (
-            column in stats.columns
-        ), f"Expected column {column} not found in summary statistics"
 
 
 def test_generate_visualizations(data):

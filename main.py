@@ -1,7 +1,6 @@
 from mylib.lib import load_dataset, calculate_statistics, create_histogram
 
 
-# filepath = "https://raw.githubusercontent.com/fivethirtyeight/data/master/district-urbanization-index-2022/urbanization-index-2022.csv"
 file_path = "rdu-weather-history.csv"
 
 
@@ -11,15 +10,9 @@ def general_describe(filepath):
     return data.describe()
 
 
-def summary(filepath):
-    """Summary of each numeric column's mean, median, and standard deviation."""
-    data = load_dataset(filepath)
-    return calculate_statistics(data)
-
 
 def generate_visualizations(filepath):
     """Generate visualizations for specific columns and save them as PNG files."""
-    # Load data
     data = load_dataset(filepath)
 
     # Create and save histograms for selected columns
