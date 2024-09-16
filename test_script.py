@@ -1,8 +1,8 @@
 import os
 import pytest
 import pandas as pd 
-from mylib.lib import load_dataset
-from main import general_describe, summary, generate_visualizations, generate_md_report
+from mylib.lib import load_dataset, calculate_statistics
+from main import general_describe, generate_visualizations, generate_md_report
 
 file_path = "rdu-weather-history.csv"
 
@@ -35,7 +35,7 @@ def test_generate_visualizations(data):
 
 def test_generate_md_report(data):
     """Test the generate_md_report function."""
-    stats = summary(file_path)
+    stats = calculate_statistics(file_path)
     image_paths = generate_visualizations(file_path)
     report_path = "summary_report.md"
     generate_md_report(stats, image_paths, report_path)
@@ -50,7 +50,6 @@ def test_generate_md_report(data):
 
 if __name__ == "__main__":
     test_general_describe(load_dataset(file_path))
-    test_summary(load_dataset(file_path))
     test_generate_visualizations(load_dataset(file_path))
     test_generate_md_report(load_dataset(file_path))
     print("All tests passed.")

@@ -1,4 +1,4 @@
-from mylib.lib import load_dataset, calculate_statistics, create_histogram
+from mylib.lib import load_dataset, create_histogram
 
 
 file_path = "rdu-weather-history.csv"
