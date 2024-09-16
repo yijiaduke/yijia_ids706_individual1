@@ -32,10 +32,10 @@ This project is designed to generate descriptive statistics and visualizations f
 git clone git@github.com:nogibjj/yijia_ids706_miniProj2.git
 ```
 
-### 2. Open the Repository in Visual Studio Code
+### 2. Open the Repository in CodeSpace
 
-- Reopen in the container using the .devcontainer configuration.
-- Rebuild the container if necessary, ensuring Docker is running on your computer.
+- Wait the Open codespaces
+Wait for container to be built 
 
 ### 3. Install dependencies
 Run the following command to install all required dependencies:
