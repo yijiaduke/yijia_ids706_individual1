@@ -35,17 +35,3 @@ def create_histogram(data, column, filepath):
     plt.close()
 
 
-
-# if __name__ == "__main__":
-#     file_path = "rdu-weather-history.csv"
-
-#     # Load the data using the provided function
-#     data = load_dataset(file_path)
-
-#     # Display the first few rows of the data
-#     # Display the first few rows of the data
-#     print(data.head())
-
-#     # Calculate descriptive statistics
-#     desc_stats = calculate_statistics(data)
-#     print(desc_stats)

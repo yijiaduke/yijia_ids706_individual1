@@ -1,14 +1,11 @@
-from mylib.lib import load_dataset, create_histogram
-
+from mylib.lib import load_dataset, calculate_statistics, create_histogram
 
 file_path = "rdu-weather-history.csv"
 
-
-def general_describe(filepath):
+def generate_describe(filepath):
     """General describe function to perform data loading and statistics calculation."""
     data = load_dataset(filepath)
-    return data.describe()
-
+    return calculate_statistics(data)
 
 
 def generate_visualizations(filepath):
@@ -24,7 +21,6 @@ def generate_visualizations(filepath):
         image_paths.append(image_path)
 
     return image_paths
-
 
 def generate_md_report(stats, image_paths, output_path_md):
     """Generate a markdown report with the descriptive statistics and images."""
