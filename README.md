@@ -1,37 +1,52 @@
-[![CI](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml)
-## Template for Python projects with RUFF linter
+# yijia_ids706_individual1
 
-![1 15_rust_built_python_tools](https://github.com/nogibjj/python-ruff-template/assets/58792/db5f7bda-a977-4c67-acbe-a70fe034fbdf)
+## Python Template
 
+This project is designed to generate descriptive statistics and visualizations from datasets. It includes integrated CI/CD capabilities using GitHub Actions, which automatically generate and commit summary reports in Markdown format as part of the pipeline.
 
-
-1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
-
-Things included are:
-
-* `Makefile`
-
-* `Pytest`
-
-* `pandas`
-
-* `Ruff`:  
-
-Run `make lint` which runs `ruff check`.  You can find out more info on [Ruff here](https://github.com/astral-sh/ruff).
-
-* `Dockerfile`
-
-* `GitHub copilot`
-
-* `jupyter` and `ipython` 
-
-* A base set of libraries for devops and web
-
-* `githubactions`
-
-## References
-
-![1 1-function-essence-of-programming](https://github.com/nogibjj/python-ruff-template/assets/58792/f7f33cd3-cff5-4014-98ea-09b6a29c7557)
+## CI/CD Badge
+[![CI](https://github.com/nogibjj/yijia_ids706_miniProj2/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/yijia_ids706_miniProj2/actions/workflows/hello.yml)
 
 
+## File Structure
 
+- **`.devcontainer/`**: Contains the development container configuration (`devcontainer.json` and a Dockerfile) to ensure a consistent development environment.
+- **`Makefile`**: Provides commands for setup, testing, linting, and formatting the project.
+- **`.github/workflows/`**: Contains CI/CD workflows for GitHub, which trigger actions like setup, linting, and testing when code is pushed to the repository.
+- **`rdu-weather-history.csv`**: Contains weather data for the Durham region, used as the dataset for analysis.
+- **`summary_report.md`**: A generated report with summary statistics (mean, median, standard deviation) and visualizations.
+
+## Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone git@github.com:nogibjj/yijia_ids706_miniProj2.git
+```
+
+### 2. Open the Repository in Visual Studio Code
+
+- Reopen in the container using the .devcontainer configuration.
+- Rebuild the container if necessary, ensuring Docker is running on your computer.
+
+### 3. Install dependencies
+Run the following command to install all required dependencies:
+
+```bash
+make install
+```
+
+## Usage
+- make install: Installs dependencies specified in requirements.txt.
+- make format: Formats Python files using Black.
+- make lint: Lints Python files using Pylint, ignoring specific patterns.
+- make test: Runs tests using pytest and generates a coverage report.
+- make clean: Removes pytest cache.
+- make generate_profile_report: Generates a profiling report in HTML and Markdown formats during CI/CD.
+
+## CI/CD Setup
+- Location: .github/workflows/
+- Description: Contains GitHub Actions workflows for CI/CD, which automatically run setup, lint, and test actions on pushes to the GitHub repository.
+
+## Summary Report Generation
+The CI/CD pipeline automatically generates a Markdown report using Pandas. The report includes descriptive statistics (mean, median, standard deviation) and visualizations generated from the dataset. The report is then committed and pushed back to the repository, allowing for easy review and access.

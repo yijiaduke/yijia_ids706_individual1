@@ -35,7 +35,7 @@ def test_generate_visualizations(data):
 
 def test_generate_md_report(data):
     """Test the generate_md_report function."""
-    stats = calculate_statistics(file_path)
+    stats = calculate_statistics(data)
     image_paths = generate_visualizations(file_path)
     report_path = "summary_report.md"
     generate_md_report(stats, image_paths, report_path)
