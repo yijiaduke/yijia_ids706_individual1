@@ -8,7 +8,11 @@ def load_dataset(filepath):
 
 def calculate_statistics(data):
     """Calculate mean, median, and standard deviation for selected columns."""
-    selected_columns = ['Temperature Minimum', 'Temperature Maximum', 'Precipitation']
+    selected_columns = [
+        'Temperature Minimum', 'Temperature Maximum', 'Precipitation',
+        'Snowfall', 'Snow Depth', 'Avgerage Wind Speed'
+    ]
+
     data = data[selected_columns]
 
     stats = {
@@ -32,3 +36,16 @@ def create_histogram(data, column, filepath):
 
 
 
+# if __name__ == "__main__":
+#     file_path = "rdu-weather-history.csv"
+
+#     # Load the data using the provided function
+#     data = load_dataset(file_path)
+
+#     # Display the first few rows of the data
+#     # Display the first few rows of the data
+#     print(data.head())
+
+#     # Calculate descriptive statistics
+#     desc_stats = calculate_statistics(data)
+#     print(desc_stats)

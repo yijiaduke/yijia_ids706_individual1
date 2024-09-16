@@ -1,15 +1,14 @@
-from mylib.lib import *
+from mylib.lib import load_dataset, calculate_statistics, create_histogram
+
 
 # filepath = "https://raw.githubusercontent.com/fivethirtyeight/data/master/district-urbanization-index-2022/urbanization-index-2022.csv"
 file_path = "rdu-weather-history.csv"
 
 
 def general_describe(filepath):
-    """General describe function to perform data loading and statistics calculation for numeric columns."""
+    """General describe function to perform data loading and statistics calculation."""
     data = load_dataset(filepath)
-    # Select only numeric columns for description
-    numeric_data = data.select_dtypes(include=['number'])  
-    return numeric_data.describe()
+    return data.describe()
 
 
 def summary(filepath):

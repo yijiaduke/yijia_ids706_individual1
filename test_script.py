@@ -1,7 +1,7 @@
 import os
 import pytest
 import pandas as pd 
-from mylib.lib import load_dataset, calculate_statistics, create_histogram
+from mylib.lib import load_dataset
 from main import general_describe, summary, generate_visualizations, generate_md_report
 
 # Define the path to the test dataset
@@ -16,13 +16,14 @@ def data():
 
 def test_general_describe(data):
     """Test the general_describe function."""
-    desc = general_describe(file_path)  # Call the function
+    desc = general_describe(file_path)  
     assert isinstance(desc, pd.DataFrame), "Description should be a DataFrame"
     
-    # Adjust expected columns to exclude non-numeric columns like 'Date'
-    numeric_columns = data.select_dtypes(include=['number']).columns  # Only numeric columns
+    # only numeric columns
+    numeric_columns = data.select_dtypes(include=['number']).columns  
     for column in numeric_columns:
-        assert column in desc.columns, f"Expected column '{column}' not found in the description"
+        assert column in desc.columns, \
+            f"Expected column '{column}' not found in the description"
 
 def test_summary(data):
     """Test the summary function."""
